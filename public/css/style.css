@@ -3,3 +3,38 @@ body {
     padding: 0;
     font-family: sans-serif;
 }
+
+.App {
+    background-color: #5e3c12;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+}
+
+.drinkMenu {
+    display: flex;
+    flex-direction: row;
+    padding: 2em;
+    width: 80%;
+    align-content: space-around;
+    flex-wrap: wrap;
+}
+
+.drinkMenu .beverageCard {
+    margin-right: 2em;
+}
+
+.drinkMenu .beverageCard .content {
+    background-color: #feebd2;
+}
+
+.drinkMenu .beverageCard .content .header {
+    color: rgb(164, 104, 6);
+}
+
+.drinkMenu .beverageCard .content .price,
+.drinkMenu .beverageCard .extra {
+    color: rgb(167, 153, 125);
+}

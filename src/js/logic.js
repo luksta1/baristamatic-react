@@ -1,4 +1,3 @@
-const readline = require('readline');
 const { mapInventory, mapMenu } = require('./display');
 
 const inStockCheck = (menu, inv) => {
@@ -56,34 +55,23 @@ const runOrder = (input, menu, inv) => {
 
 }
 
-const runCoffeeMachine = (inv, menu) => {
-
-    const rl = readline.createInterface({
-        input: process.stdin,
-        output: process.stdout,
-    });
-
-    rl.on('line', (input) => {
-        switch (input.trim()) {
-            case 'r':
-            case 'R':
-                console.log('Restocking Machine');
-                restock(menu, inv)
-                mapInventory(inv);
-                mapMenu(menu)
-                break;
-            case 'q':
-            case 'Q':
-                process.exit(0);
-                break;
-            default:
-                runOrder(input, menu, inv)
-                break;
-        }
-        rl.prompt();
-    }).on('close', () => {
-        process.exit(0);
-    });
+const runCoffeeMachine = (inv, menu, input) => {
+    switch (input.trim()) {
+        case 'r':
+        case 'R':
+            console.log('Restocking Machine');
+            restock(menu, inv)
+            mapInventory(inv);
+            mapMenu(menu)
+            break;
+        case 'q':
+        case 'Q':
+            console.log('Exiting...')
+            break;
+        default:
+            runOrder(input, menu, inv)
+            break;
+    }
 }
 
 module.exports = {

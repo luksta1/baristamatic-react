@@ -31,7 +31,7 @@ let inventory = {
     },
     espresso: {
         name: 'Espresso',
-        stock: 10,
+        stock: 0,
         unitPrice: 1.10
     },
     cocoa: {
@@ -55,7 +55,8 @@ let menu = {
             cream: 1,
         },
         price: 2.75,
-        inStock: true
+        inStock: true,
+        image: '/assets/5_coffee.png'
     },
     decafCoffee: {
         name: 'Decaf Coffee',
@@ -65,16 +66,18 @@ let menu = {
             cream: 1
         },
         price: 2.75,
-        inStock: true
+        inStock: true,
+        image: '/assets/6_decaf.png'
     },
-    caffeLate: {
-        name: 'Caffe Late',
+    caffeLatte: {
+        name: 'Caffe Latte',
         ingredients: {
             espresso: 2,
             steamedMilk: 1
         },
         price: 2.55,
-        inStock: true
+        inStock: true,
+        image: '/assets/2_cafelatte.png'
     },
     caffeAmericano: {
         name: 'Caffe Americano',
@@ -82,7 +85,8 @@ let menu = {
             espresso: 3
         },
         price: 3.30,
-        inStock: true
+        inStock: true,
+        image: '/assets/1_cafeamericano.png'
     },
     caffeMocha: {
         name: 'Caffe Mocha',
@@ -93,7 +97,8 @@ let menu = {
             whippedCream: 1
         },
         price: 2.70,
-        inStock: true
+        inStock: true,
+        image: '/assets/3_cafemocha.png'
     },
     cappuccino: {
         name: 'Cappuccino',
@@ -103,7 +108,8 @@ let menu = {
             foamedMilk: 1
         },
         price: 2.90,
-        inStock: true
+        inStock: true,
+        image: '/assets/4_cappuccino.png'
     }
 }
 
