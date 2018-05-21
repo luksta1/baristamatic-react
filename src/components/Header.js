@@ -2,31 +2,25 @@ import React, { Component } from 'react'
 import { Menu, Input } from 'semantic-ui-react'
 const { runCoffeeMachine } = require('../js/logic.js')
 
-export default class Header extends Component {
-    state = {}
+const Header = (props) => {
 
-    handleItemClick = (e, { name }) => this.setState({ activeItem: name });
-
-
-    render() {
-        const { activeItem } = this.state
-
-        return (
-            <Menu>
-                <Menu.Item name='logo'>
-                    Baristamatic
+    return (
+        <Menu>
+            <Menu.Item name='logo'>
+                Baristamatic
         </Menu.Item>
 
-                <Menu.Menu position='right'>
+            <Menu.Menu position='right'>
 
-                    <Menu.Item name='restock' active={activeItem === 'restock'} onClick={this.handleItemClick}>
-                        Restock
+                <Menu.Item name='restock' onClick={props.restock}>
+                    Restock
 </Menu.Item>
-                    <Menu.Item name='quit' active={activeItem === 'quit'} onClick={this.handleItemClick}>
-                        Quit
+                <Menu.Item name='quit' onClick={props.restock}>
+                    Quit
           </Menu.Item>
-                </Menu.Menu>
-            </Menu>
-        )
-    }
+            </Menu.Menu>
+        </Menu>
+    )
 }
+
+export default Header

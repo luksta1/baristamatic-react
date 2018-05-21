@@ -8,8 +8,12 @@ const Beverage = (props) => {
     } else {
         stock += 'Not Available'
     }
+
+    const stockCalc = () => {
+        props.calculateStock(props.bev)
+    }
     return (
-        <Card className="beverageCard">
+        <Card onClick={stockCalc} className="beverageCard">
             <Image src={props.beverage.image} />
             <Card.Content>
                 <Card.Header>

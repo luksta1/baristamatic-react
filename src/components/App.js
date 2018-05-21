@@ -14,6 +14,7 @@ class App extends Component {
     }
     this.restock = this.restock.bind(this)
     this.inStockCheck = this.inStockCheck.bind(this)
+    this.calculateStock = this.calculateStock.bind(this)
   }
 
   componentWillMount = () => {
@@ -26,10 +27,8 @@ class App extends Component {
     for (let beverage in s.menu) {
       for (let ingredient in s.menu[beverage].ingredients) {
         if (s.menu[beverage].ingredients[ingredient] <= s.inventory[ingredient].stock) {
-          console.log('ONE', s.menu[beverage].ingredients[ingredient], s.inventory[ingredient].stock)
           newState.menu[beverage].inStock = true
         } else {
-          console.log('TWO', s.menu[beverage].ingredients[ingredient], s.inventory[ingredient].stock)
           newState.menu[beverage].inStock = false
           break;
         }
@@ -49,8 +48,7 @@ class App extends Component {
     this.inStockCheck()
   }
 
-  calculateStock = (e) => {
-    let beverage = e.target.name
+  calculateStock = (beverage) => {
     let newState = { ...this.state }
     for (let ingredient in this.state.menu[beverage].ingredients) {
       if (this.state.menu[beverage].ingredients.hasOwnProperty(ingredient)) {
@@ -66,7 +64,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="head">
-          <Header />
+          <Header restock={this.restock.bind(this)} />
         </div>
         <div className="main">
           <div className="itemInventory">
@@ -77,7 +75,7 @@ class App extends Component {
               menuItems.map(beverage => {
                 let bev = this.state.menu[beverage]
                 return (
-                  <Beverage name={bev.name} key={bev.name} beverage={bev} />
+                  <Beverage calculateStock={this.calculateStock.bind(this)} bev={beverage} key={bev.name} beverage={bev} />
                 )
               })}
           </div>
