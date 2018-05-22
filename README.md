@@ -18,7 +18,7 @@ You can clone this repository to your computer by pasting
 
 . Once that is done, please follow these steps:
 - `npm install --save` or `yarn install` (this will install the dependencies)
-- `npm start` or `yarn start` (this will run the coffee machine app)
+- `npm start` or `yarn start` (this will run the coffee machine app on localhost:3000)
 - Order drinks by clicking on drink card in the menu
 - Click the `Restock` button in the nav to restock inventory
 - Click the `Quit` button in the nav to quit the program
