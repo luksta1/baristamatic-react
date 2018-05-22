@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Menu, Input } from 'semantic-ui-react'
+import { Link } from 'react-router-dom'
 
 const Header = (props) => {
 
@@ -14,9 +15,11 @@ const Header = (props) => {
                 <Menu.Item name='restock' onClick={props.restock}>
                     Restock
 </Menu.Item>
-                <Menu.Item name='quit' onClick={props.restock}>
-                    Quit
+                <Link to={`/`}>
+                    <Menu.Item name='quit' onClick={props.restock}>
+                        Quit
           </Menu.Item>
+                </Link>
             </Menu.Menu>
         </Menu>
     )
