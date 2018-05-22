@@ -54,6 +54,9 @@ class App extends Component {
       if (this.state.menu[beverage].ingredients.hasOwnProperty(ingredient)) {
         newState.inventory[ingredient].stock = this.state.inventory[ingredient].stock - this.state.menu[beverage].ingredients[ingredient]
       }
+      if (newState.inventory[ingredient].stock < 0) {
+        newState.inventory[ingredient].stock = 0
+      }
     }
     this.setState({ newState })
     this.inStockCheck()

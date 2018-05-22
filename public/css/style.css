@@ -45,6 +45,11 @@ body {
 
 .drinkMenu .beverageCard {
     margin-right: 2em;
+    transition: all 0.5s;
+}
+
+.drinkMenu .beverageCard:active {
+    opacity: 0.5;
 }
 
 .drinkMenu .beverageCard .content {
@@ -115,4 +120,46 @@ body {
     text-align: center;
     font-family: 'Damion', cursive;
     font-size: 1.5em;
+}
+
+@media (max-width: 768px) {
+    .ui.table:not(.unstackable) tr {
+        box-shadow: 0 -1px 0 0 rgba(167, 152, 124, 0.4) inset !important;
+    }
+    .ui.basic.table tbody tr {
+        border-bottom: 1px solid rgba(167, 152, 124, 0.4);
+    }
+    .itemInventory .ui[class*="very basic"].table:not(.sortable):not(.striped) td:last-child {
+        text-align: left;
+    }
+}
+
+@media (max-width: 600px) {
+    .main .itemInventory {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 540px) {
+    .main {
+        flex-direction: column
+    }
+    .inv-wrap {
+        width: 100%;
+        text-align: center;
+    }
+    .main .itemInventory .ui.collapsing.table {
+        text-align: center;
+    }
+    .itemInventory .ui[class*="very basic"].table:not(.sortable):not(.striped) td:last-child {
+        text-align: center;
+    }
+    .drinkMenu {
+        width: 100%;
+    }
+    .main .drinkMenu .ui.card {
+        width: 80%;
+        margin-right: 0;
+    }
 }
