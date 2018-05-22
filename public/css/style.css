@@ -1,0 +1,165 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.App {
+    background-color: #5e3c12;
+}
+
+.App .head .ui.menu {
+    border-radius: 0;
+    height: 6em;
+    background-color: #c8b282;
+}
+
+.App .head .ui.menu .item {
+    color: #5d3c12;
+}
+
+.App .head .ui.menu .logo {
+    font-family: 'Damion', cursive;
+    font-size: 3em;
+}
+
+.App .head .ui.menu .logo:before {
+    display: none;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+}
+
+.drinkMenu {
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    align-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 2em 0;
+}
+
+.drinkMenu .beverageCard {
+    margin-right: 2em;
+    transition: all 0.5s;
+}
+
+.drinkMenu .beverageCard:active {
+    opacity: 0.5;
+}
+
+.drinkMenu .beverageCard .content {
+    background-color: #feebd2;
+}
+
+.drinkMenu .beverageCard .content .header {
+    color: rgb(164, 104, 6);
+}
+
+.drinkMenu .beverageCard .content .price,
+.drinkMenu .beverageCard .extra {
+    color: rgb(167, 153, 125);
+}
+
+.main .drinkMenu .ui.card {
+    box-shadow: 0 1px 3px 0 #d6c098, 0 0 0 1px #d6c098;
+}
+
+.main .drinkMenu .ui.card:first-child {
+    margin-bottom: 0;
+}
+
+.main .drinkMenu .ui.card:last-child {
+    margin-top: 0;
+}
+
+.main .itemInventory {
+    width: 25%;
+    display: flex;
+    padding: 3em;
+}
+
+.main .itemInventory .ui.collapsing.table {
+    width: 100%;
+    border: 1px solid rgba(167, 152, 124, 0.4)
+}
+
+.itemInventory .inv-wrap h2 {
+    color: #c8b282;
+}
+
+.itemInventory .ui.header,
+.ui[class*="very basic"].table:not(.sortable):not(.striped) td {
+    color: #c8b282;
+}
+
+.itemInventory .ui[class*="very basic"].table:not(.sortable):not(.striped) thead tr:first-child th {
+    color: #feebd2;
+    padding: 1em;
+}
+
+.itemInventory .ui.table tr td {
+    border-top: 1px solid rgba(167, 152, 124, 0.4);
+}
+
+.itemInventory .ui.celled.table tr td {
+    border-left: 1px solid rgba(167, 152, 124, 0.4);
+}
+
+.itemInventory .ui[class*="very basic"].table:not(.sortable):not(.striped) td:first-child {
+    border-left: none;
+    padding: 1em;
+}
+
+.itemInventory .ui[class*="very basic"].table:not(.sortable):not(.striped) td:last-child {
+    padding-right: 1em;
+    text-align: center;
+    font-family: 'Damion', cursive;
+    font-size: 1.5em;
+}
+
+@media (max-width: 768px) {
+    .ui.table:not(.unstackable) tr {
+        box-shadow: 0 -1px 0 0 rgba(167, 152, 124, 0.4) inset !important;
+    }
+    .ui.basic.table tbody tr {
+        border-bottom: 1px solid rgba(167, 152, 124, 0.4);
+    }
+    .itemInventory .ui[class*="very basic"].table:not(.sortable):not(.striped) td:last-child {
+        text-align: left;
+    }
+}
+
+@media (max-width: 600px) {
+    .main .itemInventory {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 540px) {
+    .main {
+        flex-direction: column
+    }
+    .inv-wrap {
+        width: 100%;
+        text-align: center;
+    }
+    .main .itemInventory .ui.collapsing.table {
+        text-align: center;
+    }
+    .itemInventory .ui[class*="very basic"].table:not(.sortable):not(.striped) td:last-child {
+        text-align: center;
+    }
+    .drinkMenu {
+        width: 100%;
+    }
+    .main .drinkMenu .ui.card {
+        width: 80%;
+        margin-right: 0;
+    }
+}
