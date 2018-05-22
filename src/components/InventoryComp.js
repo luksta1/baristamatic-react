@@ -1,5 +1,5 @@
 import React from 'react'
-import { Header, Image, Table } from 'semantic-ui-react'
+import { Header, Table } from 'semantic-ui-react'
 
 const InventoryComp = (props) => {
     const invItems = Object.keys(props.inventory).sort();
