@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 
 const Intro = () => {
 
+    // landing page with link to main app on button click
     return (
         <div id="intro-screen">
             <div id="intro-content">

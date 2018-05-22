@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 
 const Header = (props) => {
 
+    // Both right side buttons run the restock function passed down from props. Quit links back to home page
     return (
         <Menu>
             <Menu.Item className='logo' name='logo'>

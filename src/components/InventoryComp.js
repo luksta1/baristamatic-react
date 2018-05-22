@@ -3,6 +3,8 @@ import { Header, Image, Table } from 'semantic-ui-react'
 
 const InventoryComp = (props) => {
     const invItems = Object.keys(props.inventory).sort();
+
+    // basic inventory table based on passed down inventory props
     return (
         <div className="inv-wrap">
             <h2>INVENTORY</h2>
