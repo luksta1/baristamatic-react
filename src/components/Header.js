@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Menu, Input } from 'semantic-ui-react'
-const { runCoffeeMachine } = require('../js/logic.js')
 
 const Header = (props) => {
 
