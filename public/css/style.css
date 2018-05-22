@@ -4,6 +4,39 @@ body {
     font-family: sans-serif;
 }
 
+#intro-screen {
+    background-image: url('/assets/coffee_shop.jpg');
+    background-size: cover;
+    display: flex;
+    height: 100vh;
+}
+
+#intro-content {
+    text-align: center;
+    width: 100vw;
+    align-self: center;
+}
+
+#intro-content h1 {
+    font-family: 'Damion', cursive;
+    font-size: 8em;
+    color: #c8b282;
+}
+
+#intro-content .ui.button {
+    background: #ffebd2 none;
+    color: #603d13;
+}
+
+#intro-content .ui.button:hover,
+#intro-content .ui.button:focus {
+    background-color: #f3dfc7
+}
+
+#intro-content .ui.button:active {
+    background-color: #e4d2bb
+}
+
 .App {
     background-color: #5e3c12;
 }
@@ -16,6 +49,7 @@ body {
 
 .App .head .ui.menu .item {
     color: #5d3c12;
+    height: 100%;
 }
 
 .App .head .ui.menu .logo {
@@ -23,8 +57,13 @@ body {
     font-size: 3em;
 }
 
-.App .head .ui.menu .logo:before {
+.App .head .ui.menu .logo:before,
+.App .head .ui.menu .item:before {
     display: none;
+}
+
+.outStock {
+    opacity: 0.8;
 }
 
 .main {
@@ -161,5 +200,8 @@ body {
     .main .drinkMenu .ui.card {
         width: 80%;
         margin-right: 0;
+    }
+    #intro-content h1 {
+        font-size: 5em;
     }
 }
