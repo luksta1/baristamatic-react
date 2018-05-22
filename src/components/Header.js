@@ -6,7 +6,7 @@ const Header = (props) => {
 
     return (
         <Menu>
-            <Menu.Item name='logo'>
+            <Menu.Item className='logo' name='logo'>
                 Baristamatic
         </Menu.Item>
 

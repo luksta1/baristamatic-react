@@ -31,7 +31,7 @@ let inventory = {
     },
     espresso: {
         name: 'Espresso',
-        stock: 0,
+        stock: 10,
         unitPrice: 1.10
     },
     cocoa: {
