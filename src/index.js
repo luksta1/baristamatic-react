@@ -5,6 +5,8 @@ import App from './components/App'
 import { Route, BrowserRouter } from 'react-router-dom'
 
 ReactDOM.render(
+
+    // Browser Router set up to track links to main landing page and internal app page
     <BrowserRouter>
         <div>
             <Route exact path="/" component={Intro} />

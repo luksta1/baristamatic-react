@@ -17,10 +17,13 @@ class App extends Component {
     this.calculateStock = this.calculateStock.bind(this)
   }
 
+
+  // run function to check inventory stock each time the app is loaded
   componentWillMount = () => {
     this.inStockCheck();
   }
 
+  // function to reset the inventory on state appropriately
   inStockCheck = () => {
     let s = this.state
     let newState = { ...this.state }
@@ -37,6 +40,7 @@ class App extends Component {
     this.setState({ newState })
   }
 
+  // function to reset the stock on state appropriately, which then runs the function to check stock
   restock = () => {
     for (let ingredient in this.state.inventory) {
       if (this.state.inventory.hasOwnProperty(ingredient)) {
@@ -48,6 +52,7 @@ class App extends Component {
     this.inStockCheck()
   }
 
+  // function to calculate the stock on state based on an ordered drink, when then runs the function to check stock
   calculateStock = (beverage) => {
     let newState = { ...this.state }
     for (let ingredient in this.state.menu[beverage].ingredients) {
@@ -62,6 +67,7 @@ class App extends Component {
     this.inStockCheck()
   }
 
+  // render of the main app screen, header, inventory and mapping over the beverages
   render() {
     const menuItems = Object.keys(this.state.menu).sort();
     return (
