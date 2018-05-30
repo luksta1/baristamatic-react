@@ -1,0 +1,184 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="App"
+>
+  <div
+    className="head"
+  >
+    <Header
+      restock={[Function]}
+    />
+  </div>
+  <div
+    className="main"
+  >
+    <div
+      className="itemInventory"
+    >
+      <InventoryComp
+        inventory={
+          Object {
+            "cocoa": Object {
+              "name": "Cocoa",
+              "stock": 10,
+              "unitPrice": 0.9,
+            },
+            "coffee": Object {
+              "name": "Coffee",
+              "stock": 10,
+              "unitPrice": 0.75,
+            },
+            "cream": Object {
+              "name": "Cream",
+              "stock": 10,
+              "unitPrice": 0.25,
+            },
+            "decafCoffee": Object {
+              "name": "Decaf Coffee",
+              "stock": 10,
+              "unitPrice": 0.75,
+            },
+            "espresso": Object {
+              "name": "Espresso",
+              "stock": 10,
+              "unitPrice": 1.1,
+            },
+            "foamedMilk": Object {
+              "name": "Foamed Milk",
+              "stock": 10,
+              "unitPrice": 0.35,
+            },
+            "steamedMilk": Object {
+              "name": "Steamed Milk",
+              "stock": 10,
+              "unitPrice": 0.35,
+            },
+            "sugar": Object {
+              "name": "Sugar",
+              "stock": 10,
+              "unitPrice": 0.25,
+            },
+            "whippedCream": Object {
+              "name": "Whipped Cream",
+              "stock": 10,
+              "unitPrice": 1,
+            },
+          }
+        }
+      />
+    </div>
+    <div
+      className="drinkMenu"
+    >
+      <Beverage
+        bev="caffeAmericano"
+        beverage={
+          Object {
+            "image": "/assets/1_cafeamericano.png",
+            "inStock": true,
+            "ingredients": Object {
+              "espresso": 3,
+            },
+            "name": "Caffe Americano",
+            "price": 3.3,
+          }
+        }
+        calculateStock={[Function]}
+        key="Caffe Americano"
+      />
+      <Beverage
+        bev="caffeLatte"
+        beverage={
+          Object {
+            "image": "/assets/2_cafelatte.png",
+            "inStock": true,
+            "ingredients": Object {
+              "espresso": 2,
+              "steamedMilk": 1,
+            },
+            "name": "Caffe Latte",
+            "price": 2.55,
+          }
+        }
+        calculateStock={[Function]}
+        key="Caffe Latte"
+      />
+      <Beverage
+        bev="caffeMocha"
+        beverage={
+          Object {
+            "image": "/assets/3_cafemocha.png",
+            "inStock": true,
+            "ingredients": Object {
+              "cocoa": 1,
+              "espresso": 1,
+              "steamedMilk": 1,
+              "whippedCream": 1,
+            },
+            "name": "Caffe Mocha",
+            "price": 2.7,
+          }
+        }
+        calculateStock={[Function]}
+        key="Caffe Mocha"
+      />
+      <Beverage
+        bev="cappuccino"
+        beverage={
+          Object {
+            "image": "/assets/4_cappuccino.png",
+            "inStock": true,
+            "ingredients": Object {
+              "espresso": 2,
+              "foamedMilk": 1,
+              "steamedMilk": 1,
+            },
+            "name": "Cappuccino",
+            "price": 2.9,
+          }
+        }
+        calculateStock={[Function]}
+        key="Cappuccino"
+      />
+      <Beverage
+        bev="coffee"
+        beverage={
+          Object {
+            "image": "/assets/5_coffee.png",
+            "inStock": true,
+            "ingredients": Object {
+              "coffee": 3,
+              "cream": 1,
+              "sugar": 1,
+            },
+            "name": "Coffee",
+            "price": 2.75,
+          }
+        }
+        calculateStock={[Function]}
+        key="Coffee"
+      />
+      <Beverage
+        bev="decafCoffee"
+        beverage={
+          Object {
+            "image": "/assets/6_decaf.png",
+            "inStock": true,
+            "ingredients": Object {
+              "cream": 1,
+              "decafCoffee": 3,
+              "sugar": 1,
+            },
+            "name": "Decaf Coffee",
+            "price": 2.75,
+          }
+        }
+        calculateStock={[Function]}
+        key="Decaf Coffee"
+      />
+    </div>
+  </div>
+</div>
+`;
