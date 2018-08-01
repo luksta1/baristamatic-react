@@ -10,11 +10,11 @@ class App extends Component {
     super(props);
     this.state = {
       menu: { ...menu },
-      inventory: { ...inventory }
-    }
-    this.restock = this.restock.bind(this)
-    this.inStockCheck = this.inStockCheck.bind(this)
-    this.calculateStock = this.calculateStock.bind(this)
+      inventory: { ...inventory },
+    };
+    this.restock = this.restock.bind(this);
+    this.inStockCheck = this.inStockCheck.bind(this);
+    this.calculateStock = this.calculateStock.bind(this);
   }
 
 
@@ -25,8 +25,8 @@ class App extends Component {
 
   // function to reset the inventory on state appropriately
   inStockCheck = () => {
-    let s = this.state
-    let newState = { ...this.state }
+    let s = this.state;
+    let newState = { ...this.state };
     for (let beverage in s.menu) {
       for (let ingredient in s.menu[beverage].ingredients) {
         if (s.menu[beverage].ingredients[ingredient] <= s.inventory[ingredient].stock) {

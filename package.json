@@ -8,7 +8,8 @@
     "react-router": "3.0.5",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.4",
-    "semantic-ui-react": "^0.80.0"
+    "semantic-ui-react": "^0.80.0",
+    "zoid": "^6.0.65"
   },
   "scripts": {
     "start": "react-scripts start",
